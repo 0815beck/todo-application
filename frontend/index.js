@@ -1,5 +1,5 @@
 let notes = []
-const baseUrl = 'https://todo-application.fly.dev'
+const baseUrl = window.location.href
 
 document.addEventListener('DOMContentLoaded', async function(event) {
 
