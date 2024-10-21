@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', async function(event) {
 
 //  get the list of notes from the server
 
-    const response = await fetch(`${baseUrl}/api/notes`)
+    const response = await fetch(`${baseUrl}api/notes`)
     const data = await response.json()
     notes = data
     const ul = document.getElementById('note-list')
