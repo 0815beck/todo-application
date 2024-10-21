@@ -4,7 +4,7 @@ const path = require('path')
 
 //Start the server
 
-const port = process.env.port || 3001
+const port = process.env.PORT || 3001
 const app = express()
 
 app.listen(port, () => {
