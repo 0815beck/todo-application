@@ -35,7 +35,7 @@ document.addEventListener('DOMContentLoaded', async function(event) {
             important: false
         }
         textField.value=''
-        const response = await fetch(`${baseUrl}/api/notes`, {
+        const response = await fetch(`${baseUrl}api/notes`, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(newNote)
@@ -78,7 +78,7 @@ function addEventListeners(li) {
     console.log(deleteBtn)
     deleteBtn.addEventListener('click',  async function(event) {
         const response =  await fetch(
-            `${baseUrl}/api/notes/${id}`, 
+            `${baseUrl}api/notes/${id}`, 
             { method: 'DELETE' }
         )
         if (!response.ok) {
@@ -94,7 +94,7 @@ function addEventListeners(li) {
     const importanceBtn = document.querySelector(`#${li.id} .importance-btn`)
     importanceBtn.addEventListener('click', async function(event) {
         const response = await fetch(
-            `${baseUrl}/api/notes/${id}`, {
+            `${baseUrl}api/notes/${id}`, {
             method: 'PUT',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({important: !note.important, content: note.content})
